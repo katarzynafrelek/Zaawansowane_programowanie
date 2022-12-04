@@ -1,0 +1,42 @@
+{
+  "info": {
+    "description": "",
+	"version": "1.0.0",
+	"title": "Projekt Programistyczny - Swagger",
+	"license": {
+	  "name": "MIT",
+	  "url": "https://opensource.org/licenses/MIT"
+	}
+  },
+  "swagger": "2.0",
+  "paths": {
+      "/login": {
+          "post": {
+              "tags": ["Login To Get Time"],
+              "summary": "Login To Get Time",
+              "parameters": [{
+                  "in": "formData",
+                  "name": "username",
+                  "description": "Login",
+                  "type": "string",
+                  "required": true
+              },{
+                  "in": "formData",
+                  "name": "password",
+                  "description": "Hasło",
+                  "type": "string",
+                  "required": true
+              }
+              ],
+              "responses": {
+                  "200": {
+                      "description": "OK"
+                  },
+                  "500": {
+                      "description": "Error during processing request"
+                  }
+              }
+          }
+      }
+  }
+}
